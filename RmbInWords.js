@@ -12,7 +12,7 @@ function rmbInWords(num) {
 		9: "玖",
 	};
 	const arrInner = ["", "拾", "佰", "仟"];
-	const arrOuter = ["", "万", "亿", "京"];
+	const arrOuter = ["", "万", "亿", "兆", "京"];
 	const arrWhenWithoutZero = arrOuter.concat(["元", "零"]);
 	const arrSplitedNumber = String(Math.round(num * 100) / 100).split(".").map(x=>x.split(""));
 	const [aboveZero, belowZero] = arrSplitedNumber.length === 2? arrSplitedNumber: [arrSplitedNumber[0], []];
